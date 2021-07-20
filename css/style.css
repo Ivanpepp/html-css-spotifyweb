@@ -8,6 +8,7 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
 /* HEADER */
 header{
     height: 7vh;
@@ -49,13 +50,14 @@ header{
 nav.menu{
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 180px;
     background-color: black;
     color: grey;
-    height: 100vh;
+    height: 93vh;
     position: absolute;
     top: 0;
     left: 0;
+    overflow-y: auto;
 }
 
 /* dimension e spaziatura "icone" */
@@ -99,18 +101,18 @@ nav.menu{
     padding: 0 20px;
     position: absolute;
     bottom: 10px;
+    width: 100%;
 }
 .line{
     height: 2px;
     background-color: grey;
     margin-top: 10px;
     margin-bottom: 20px;
+    width: 100%;
 }
 .aside-foot img:nth-child(1){
     height: 10px;
     width: 10px;
-   
-   
 }
 
 .aside-foot .user img{
@@ -120,9 +122,72 @@ nav.menu{
     width: 20px;
     vertical-align: middle;
 }
+.aside-foot span{
+    margin-left: 5px;
+    font-size: .7em;
+}
 .aside-foot .user span{
     color: white;
-    padding-left: 5px;
+    margin-left: 5px;
     font-weight: bold;
     font-size: 0.7em;
+}
+/* MAIN SECTION */
+.main-container{
+    
+    height: 86vh;
+    background-color: rgb(14, 14, 27);
+    padding: 20px;
+    padding-left: 200px;
+    overflow-y: auto;
+    color: white;
+  
+    
+}
+
+/*  main menu */
+
+.main-menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+}
+.main-menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    font-size: .8em;
+    font-weight: bold;
+}
+.main-menu ul li{
+    padding: 0 10px;
+    padding-bottom: 30px;
+}
+/* Sezione banner */
+
+.flex{
+    display: flex;
+
+}
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+}
+.banner{
+    width: 200px;
+    height: 100%;
+    margin: 20px 10px;
+    background-color: yellow;
+    
+    
+}
+
+
+/* FOOTER PLAYBAR */
+footer{
+    height: 7vh;
+    background-color: grey;
+    
 }
