@@ -5,14 +5,23 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 /* HEADER */
 header{
     height: 7vh;
-    background-color: rgb(7, 7, 15);
+    background-color: rgb(10, 10, 18);
     text-align: right;
-    padding: 20px 0;
-   
+    padding: 20px 0;  
+    position: relative;
+}
+
+.logo{
+    background-color: black;
+    width: 150px;
+    vertical-align: middle;
+    padding: 20px 10px;
 }
 .upgrade{
     text-transform: uppercase;
@@ -21,5 +30,99 @@ header{
     border-radius: 20px;
     background-color: transparent;
     color: white;
-    
+}
+/* FLOAT */
+.fl{
+    float:left
+}
+.fr{
+    float: right;
+}
+.clearfix{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* MENU SULLA SINISTRA */
+
+nav.menu{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    background-color: black;
+    color: grey;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* dimension e spaziatura "icone" */
+.menu ul li a img{
+    height:20px;
+    width: 20px;
+    filter:invert(1);
+    filter: brightness(.5);
+    vertical-align: middle;
+}
+.menu path{
+    fill: grey;
+}
+.menu svg{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.fa-plus-square{
+    font-size: 40px;
+    margin-right: 10px;
+}
+.menu h5{
+    padding: 20px 0  10px 20px;
+    color: white;
+
+}
+.menu ul>li{
+    line-height: 30px;
+    padding-left: 20px;
+    border-left: 2px solid transparent;
+}
+.menu ul>li>a{
+    text-decoration: none;
+    color: grey;
+    font-size: .7em;
+    list-style-type: none;
+}
+/* parte inferiore menu */
+.aside-foot{
+    padding: 0 20px;
+    position: absolute;
+    bottom: 10px;
+}
+.line{
+    height: 2px;
+    background-color: grey;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.aside-foot img:nth-child(1){
+    height: 10px;
+    width: 10px;
+   
+   
+}
+
+.aside-foot .user img{
+    background-color: grey;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+.aside-foot .user span{
+    color: white;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 0.7em;
 }
