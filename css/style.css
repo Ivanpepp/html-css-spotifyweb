@@ -24,6 +24,7 @@ main{
     position: fixed;
     top: 0;
     width: calc(100% - 180px);
+    z-index: 2;
    
    
 }
@@ -32,7 +33,7 @@ main{
     background-color: black;
     width: 150px;
     vertical-align: middle;
-    padding: 20px 10px;
+    padding: 20px 5px;
 }
 .upgrade{
     text-transform: uppercase;
@@ -41,6 +42,11 @@ main{
     border-radius: 20px;
     background-color: transparent;
     color: white;
+    transition: all .3s ease-in;
+}
+.upgrade:hover{
+    transform: scale(1.1);
+    margin-right: 10px;
 }
 /* FLOAT */
 .fl{
@@ -72,6 +78,24 @@ nav.menu{
 }
 
 /* dimension e spaziatura "icone" */
+.menu ul li:hover a{
+    color: white;
+    font-weight: bold;
+}
+.menu ul>li:hover {
+   border-left:3px solid yellowgreen;
+}
+.menu ul>li:focus {
+    border-left:3px solid yellowgreen;
+ }
+.menu ul li:hover img{
+    filter:invert(0);
+    filter: brightness(1);
+}
+.menu ul li:hover path{
+    fill: white;
+}
+
 .menu ul li a img{
     height:20px;
     width: 20px;
@@ -99,13 +123,14 @@ nav.menu{
 .menu ul>li{
     line-height: 30px;
     padding-left: 20px;
-    border-left: 2px solid transparent;
+    border-left: 3px solid transparent;
 }
 .menu ul>li>a{
     text-decoration: none;
     color: grey;
     font-size: .7em;
     list-style-type: none;
+    font-weight: bold;
 }
 /* parte inferiore menu */
 .aside-foot{
@@ -113,7 +138,13 @@ nav.menu{
     position: absolute;
     bottom: 10px;
     width: 100%;
+    font-weight: bold;
 }
+.aside-foot span:hover{
+ color: white;
+ cursor: pointer;
+}
+
 .line{
     height: 2px;
     background-color: grey;
@@ -122,8 +153,9 @@ nav.menu{
     width: 100%;
 }
 .aside-foot img:nth-child(1){
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
 }
 
 .aside-foot .user img{
@@ -159,7 +191,18 @@ nav.menu{
     
 }
 /*  main menu */
-
+.main-menu ul>li>a>.line{
+    background-color: yellowgreen;
+    width: 25px;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translate(-50%, -50%);
+    
+    
+}
 .main-menu ul{
     display: flex;
     flex-wrap: wrap;
@@ -172,15 +215,37 @@ nav.menu{
     color: grey;
     font-size: .8em;
     font-weight: bold;
+    position: relative;
+    
 }
 .main-menu ul li{
     padding: 0 10px;
     padding-bottom: 30px;
+    
+}
+.main-menu ul li:hover a{
+   color: white;
 }
 /* Sezione banner */
 
-
-
+.play-btn{
+    position: relative;
+}
+.play-btn .far{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    display: none;
+}
+.row .box:hover img{
+    opacity: 0.2;
+    cursor: pointer;
+}
+.row .box:hover .fa-play-circle{
+    display: block;
+}
 .row{
     width: 100%;
     display: flex;
@@ -189,8 +254,8 @@ nav.menu{
 }
 
 .box{
-    margin: 20px 10px;
-    width: calc(100% / 6 - 20px);
+    margin: 20px 15px 20px 0;
+    width: calc(100% / 6 - 15px);
     text-align: center;
 }
 .box img{
@@ -242,11 +307,21 @@ footer{
     color: grey;
     font-size: .6em;
 }
+.brano:hover div{
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
 
 .pl-left .far{
     color: grey;
     font-size: 15px;
     padding-right: 10px
+}
+.pl-left .far:hover{
+    color: white;
+    cursor: pointer;
 }
 
 /* parte centrale playbar */
@@ -254,7 +329,6 @@ footer{
 .pl-middle{
     width: 40%;
     
-
 }
 .player{
     margin-bottom: 10px;
@@ -264,8 +338,18 @@ footer{
 .player .fas,
 .player .far{
     font: 20px;
-    padding-right: 15px;
+    margin: 0 10px;
     vertical-align: middle;
+    transition: all .3s ease-in;
+}
+.player .fas:hover,
+.player .far:hover{
+    cursor: pointer;
+    
+}
+.player .far:hover{
+    transform: scale(1.2);
+    
 }
 .fa-play-circle{
     font-size: 30px;
@@ -279,17 +363,38 @@ footer{
 .slide-line{
     margin: 0 25px;
     width: 100px;
-    height: 3px;
-    border-radius: 5px;
+    height: 5px;
+    border-radius: 20px;
     background-color: grey;
     flex-grow: 1;
     flex-shrink: 2;
+    
   
 }
+
 .slide-line-active{
     height: 100%;
     width: 20%;
     background-color: rgb(229, 228, 228);
+    position: relative;
+    border-radius: 20px;
+}
+.dot{
+    padding: 7px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    left: 100%;
+    display: none;
+}
+.slide-bar:hover .dot{
+    display: block;
+    cursor: pointer;
+}
+.slide-bar:hover .slide-line-active{
+    background-color: yellowgreen;
 }
 .slide-time{
     color: white;
@@ -300,18 +405,38 @@ footer{
 .pl-right{
     width: 200px;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    line-height: 60px;
+
 }
 .pl-right .fas{
     font-size: 10px;
     padding-right: 10px;
 }
+
 .pl-right .slide-line{
     display: inline-block;
-    width: 100%;
+    width: 110px;
     flex-grow: 0;
     margin: 0;
     margin-right: 10px;
+}
+.volume-bar{
+    display: inline-block
+}
+.volume-bar:hover{
+    cursor: pointer;
+}
+.pl-right .volume-bar:hover .dot{
+    display: block;
+}
+.pl-right .volume-bar:hover .slide-line-active{
+    background-color: yellowgreen;
+    cursor: pointer;
+}
+.pl-right:hover .fas{
+    cursor: pointer;
+}
+
+#noborder{
+    border-left: 3px solid transparent;
 }
