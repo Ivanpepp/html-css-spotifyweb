@@ -15,14 +15,16 @@ main{
      height: 100vh;
      width: 100%;
  }
-/* HEADER */
+
 .top-upgrade{
     height: 100px;
     background-color: rgb(10, 10, 18);
     text-align: right;
     padding: 20px 0;  
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 180px);
+   
    
 }
 
@@ -152,7 +154,10 @@ nav.menu{
     
     
 }
-
+.library-content{
+    padding: 120px 20px 20px 20px;
+    
+}
 /*  main menu */
 
 .main-menu ul{
@@ -174,25 +179,34 @@ nav.menu{
 }
 /* Sezione banner */
 
-.flex{
-    display: flex;
 
-}
-.main-section{
+
+.row{
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
+    
 }
-.banner{
-    width: calc(100% / 6 - 20px);
-    height: 200px;
+
+.box{
     margin: 20px 10px;
-    background-color: yellow;
-    
-    
-    
+    width: calc(100% / 6 - 20px);
+    text-align: center;
 }
-
-
+.box img{
+    width: 100%;
+}
+.box h4{
+    padding-top: 15px;
+}
+.description{
+    color: grey;
+    font-size: 0.7em;
+    padding-top: 15px;
+}
+.circle{
+    border-radius: 50%;
+}
 /* FOOTER PLAYBAR */
 footer{
     height: 100px;
