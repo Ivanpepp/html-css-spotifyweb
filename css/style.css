@@ -8,14 +8,22 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
-
+main{
+    height: calc(100% - 100px);
+}
+ .container{
+     height: 100vh;
+     width: 100%;
+ }
 /* HEADER */
-header{
-    height: 7vh;
+.top-upgrade{
+    height: 100px;
     background-color: rgb(10, 10, 18);
     text-align: right;
     padding: 20px 0;  
     position: relative;
+    width: 100%;
+   
 }
 
 .logo{
@@ -39,7 +47,7 @@ header{
 .fr{
     float: right;
 }
-.clearfix{
+.clearfix::after{
     content: '';
     display: table;
     clear: both;
@@ -47,17 +55,18 @@ header{
 
 /* MENU SULLA SINISTRA */
 
+aside{
+    height: 100%;
+    width: 180px;
+}
 nav.menu{
     display: flex;
     flex-direction: column;
-    width: 180px;
+    height: 100%;
     background-color: black;
     color: grey;
-    height: 93vh;
-    position: absolute;
-    top: 0;
-    left: 0;
     overflow-y: auto;
+    position: relative;
 }
 
 /* dimension e spaziatura "icone" */
@@ -135,13 +144,12 @@ nav.menu{
 /* MAIN SECTION */
 .main-container{
     
-    height: 86vh;
-    background-color: rgb(14, 14, 27);
-    padding: 20px;
-    padding-left: 200px;
+    height:100%;
+    background-color: rgb(14, 14, 27);   
     overflow-y: auto;
     color: white;
-  
+    width: calc(100% - 180px);
+    
     
 }
 
@@ -173,13 +181,13 @@ nav.menu{
 .main-section{
     display: flex;
     flex-wrap: wrap;
-    height: 200px;
 }
 .banner{
-    width: 200px;
-    height: 100%;
+    width: calc(100% / 6 - 20px);
+    height: 200px;
     margin: 20px 10px;
     background-color: yellow;
+    
     
     
 }
@@ -187,7 +195,7 @@ nav.menu{
 
 /* FOOTER PLAYBAR */
 footer{
-    height: 7vh;
+    height: 100px;
     background-color: grey;
     
 }
