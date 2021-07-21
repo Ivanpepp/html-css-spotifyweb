@@ -210,6 +210,55 @@ nav.menu{
 /* FOOTER PLAYBAR */
 footer{
     height: 100px;
-    background-color: grey;
+    background-color: rgb(29, 29, 29);
+    display: flex;
+    align-items:center;
     
+}
+.playbar{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+/* parte sinistra playbar */
+.pl-left{
+    width: 250px;
+    background-color: rgba(255, 0, 0, 0.053);
+    
+}
+.pl-left img{
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+.brano{
+    display: inline-block;
+    vertical-align: middle;
+    color: white;
+    padding-right: 20px ;
+}
+.brano div{
+    color: grey;
+    font-size: .6em;
+}
+
+.pl-left .far{
+    color: grey;
+    font-size: 15px;
+    padding-right: 10px
+}
+
+/* parte centrale playbar */
+
+.pl-middle{
+    width: 600px;
+    background-color: red;
+    
+}
+
+/* parte destra playbar */
+.pl-right{
+    width: 250px;
+    background-color: blue;
 }
