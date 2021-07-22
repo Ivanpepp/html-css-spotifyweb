@@ -137,11 +137,12 @@ nav.menu{
 }
 /* parte inferiore menu */
 .aside-foot{
-    padding: 0 20px;
+    padding: 5px 20px;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
     font-weight: bold;
+    background-color: black;
 }
 .aside-foot span:hover{
  color: white;
@@ -276,17 +277,19 @@ nav.menu{
 /* FOOTER PLAYBAR */
 footer{
     height: 100px;
-    background-color: rgb(29, 29, 29);
     display: flex;
-    align-items:center;
     
+    position: relative;
 }
 .playbar{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
-}
+    position: fixed;
+    z-index: 1000;
+    background-color: rgb(29, 29, 29);
+    height: 100px;
+    padding-top: 30px;}
 /* parte sinistra playbar */
 .pl-left{
     min-width: 152px;
@@ -396,6 +399,9 @@ footer{
     left: 100%;
     display: none;
 }
+.slide-line:hover{
+    cursor: pointer;
+}
 .slide-bar:hover .dot{
     display: block;
     cursor: pointer;
@@ -451,7 +457,9 @@ footer{
 #noborder{
     border-left: 3px solid transparent;
 }
-
+.f-none{
+    display: none;
+}
 
 @media screen and (min-width: 769px) and (max-width: 1024px)
 {
@@ -540,4 +548,19 @@ footer{
     .top-upgrade{
         width: calc(100% - 50px);
     }
+}
+@media screen and (max-height: 560px){ 
+    .aside-foot .user{
+        display: none;
+    }
+    .line{
+        margin-bottom: 0;
+    }
+   
+}
+@media screen and (max-height: 500px){ 
+    .aside-foot{
+        display: none;
+    }
+    
 }
