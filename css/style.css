@@ -283,25 +283,28 @@ footer{
 .playbar{
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    
 }
 /* parte sinistra playbar */
 .pl-left{
-    width: 250px;
+    min-width: 152px;
    
     
 }
 .pl-left img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     vertical-align: middle;
-    margin: 0 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    
 }
 .brano{
     display: inline-block;
     vertical-align: middle;
     color: white;
-    padding-right: 20px ;
+    padding-right: 5px ;
 }
 .brano div{
     color: grey;
@@ -316,8 +319,8 @@ footer{
 
 .pl-left .far{
     color: grey;
-    font-size: 15px;
-    padding-right: 10px
+    font-size: 12px;
+    padding-right: 5px
 }
 .pl-left .far:hover{
     color: white;
@@ -335,12 +338,11 @@ footer{
     text-align: center;
     color: white;
 }
-.player .fas,
-.player .far{
-    font: 20px;
+.player .fas{
+    font-size: 20px;
     margin: 0 10px;
     vertical-align: middle;
-    transition: all .3s ease-in;
+    
 }
 .player .fas:hover,
 .player .far:hover{
@@ -350,9 +352,13 @@ footer{
 .player .far:hover{
     transform: scale(1.2);
     
+    
 }
 .fa-play-circle{
     font-size: 30px;
+    margin: 0 10px;
+    vertical-align: middle;
+    transition: all .3s ease-in;
 }
 .slide-bar{
     display: flex;
@@ -361,7 +367,7 @@ footer{
 }
 
 .slide-line{
-    margin: 0 25px;
+    margin: 0 2%;
     width: 100px;
     height: 5px;
     border-radius: 20px;
@@ -403,25 +409,26 @@ footer{
 
 /* parte destra playbar */
 .pl-right{
-    width: 200px;
+    min-width: 152px;
     color: white;
-    line-height: 60px;
+    line-height: 40px;
 
 }
 .pl-right .fas{
     font-size: 10px;
-    padding-right: 10px;
+    padding-right: 2%;
 }
 
 .pl-right .slide-line{
     display: inline-block;
-    width: 110px;
+    width: 100%;
     flex-grow: 0;
     margin: 0;
     margin-right: 10px;
 }
 .volume-bar{
-    display: inline-block
+    display: inline-block;
+    width: 55%;
 }
 .volume-bar:hover{
     cursor: pointer;
@@ -434,6 +441,9 @@ footer{
     cursor: pointer;
 }
 .pl-right:hover .fas{
+    cursor: pointer;
+}
+.fa-play-circle:hover{
     cursor: pointer;
 }
 
